@@ -1,4 +1,4 @@
-# Legacy's Mental Health CounselChat
+# Mental Health CounselChat
 
 Legacy's Mental Health CounselChat is an AI-powered chatbot designed to assist mental health counselors by providing empathetic, context-aware advice and resources. The project integrates advanced natural language processing (NLP) models to classify topics, retrieve relevant information, and generate structured responses, creating a seamless experience for counselors.
 

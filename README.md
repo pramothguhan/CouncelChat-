@@ -324,13 +324,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Dataset: CounselChat mental health Q&A dataset
-- Models: Hugging Face Transformers, OpenAI GPT-3.5
+- Models: Hugging Face Transformers, OpenAI GPT-4o mini
 - Framework: Streamlit for the web interface
 
 ## 📧 Contact
 
 **Pramoth Guhan**
-- GitHub: [@yourusername](https://github.com/pramothguhan)
+- GitHub: [@pramothguhan](https://github.com/pramothguhan)
 - Email: guhan.p@northeastern.edu
 
 ## ⚖️ Disclaimer

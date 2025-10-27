@@ -10,7 +10,7 @@ An AI-powered companion for mental health counselors that combines Machine Learn
 
 - **Topic Classification**: Automatically categorizes mental health concerns into 9 main topics using fine-tuned RoBERTa
 - **Retrieval-Augmented Generation (RAG)**: Retrieves relevant professional responses from a counseling dataset
-- **Personalized Advice**: Generates tailored, empathetic advice using GPT-3.5
+- **Personalized Advice**: Generates tailored, empathetic advice using GPT-4o mini
 - **Interactive Chat Interface**: User-friendly Streamlit interface with chat history
 - **Topic Filtering**: Improves retrieval accuracy by filtering similar cases by predicted topic
 
@@ -23,7 +23,7 @@ User Input → RoBERTa Classifier → Topic Prediction
                                         ↓
                             Retrieve Top-K Similar Q&A Pairs
                                         ↓
-                            GPT-3.5 with Retrieved Context
+                            GPT-4o mini with Retrieved Context
                                         ↓
                             Empathetic, Actionable Advice
 ```
@@ -87,13 +87,8 @@ OPENAI_API_KEY=sk-your-actual-api-key-here
 
 **🔒 Security Note:** Never commit your `.env` file to version control!
 
-### Step 5: Prepare Directory Structure
 
-```bash
-mkdir -p models data outputs
-```
-
-### Step 6: Add Your Files
+### Step 5: Add Your Files
 
 Place the following files in their respective directories:
 - `models/rag_model_checkpoint.pth` - Your trained RoBERTa model
@@ -124,25 +119,20 @@ questionText,answerText,topic_group
 
 ## 🎮 Usage
 
-### Running the Streamlit App
-
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at `http://localhost:8501`
-
 ### Training the Model
 
 ```bash
 # Basic training
 python train_roberta.py
 
-# Custom training
-python train_roberta.py --epochs 15 --batch_size 32
+# Quick test (3 epochs)
+python train_roberta.py --epochs 3
 
-# Training with immediate testing
-python train_roberta.py --test
+# Full training with testing
+python train_roberta.py --epochs 15 --test
+
+# High-performance (requires good GPU)
+python train_roberta.py --epochs 20 --batch_size 32
 ```
 
 ### Testing the RAG Pipeline
@@ -199,6 +189,22 @@ python train_roberta.py --test
 3. Run all cells to train the model
 
 See `USAGE_GUIDE.md` for detailed training instructions.
+
+### Running the Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+The app will open in your browser at `http://localhost:8501`
+
+```bash
+# Custom port
+streamlit run app.py --server.port 8080
+
+# Kill existing Streamlit process
+pkill -f streamlit
+```
 
 ## 📁 Project Structure
 
@@ -324,8 +330,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Pramoth Guhan**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/pramothguhan)
+- Email: guhan.p@northeastern.edu
 
 ## ⚖️ Disclaimer
 

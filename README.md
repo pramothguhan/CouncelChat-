@@ -1,4 +1,4 @@
-# 🧠 Legacy's Mental Health CounselChat
+# CounselChat - An AI Powered Mental Health Assist for Councelers
 
 An AI-powered companion for mental health counselors that combines Machine Learning (RoBERTa) and Large Language Models (GPT-3.5) to deliver empathetic, insightful, and practical mental health advice.
 
@@ -276,7 +276,7 @@ topic_groups = {
 
 ### Changing the LLM
 
-Replace GPT-3.5 with another model by modifying the `generate_llm_response` function:
+Replace GPT-4o mini with another model by modifying the `generate_llm_response` function:
 
 ```python
 response = client.chat.completions.create(

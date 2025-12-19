@@ -1,6 +1,6 @@
 # CounselChat - An AI Powered Mental Health Assist for Councelers
 
-An AI-powered companion for mental health counselors that combines Machine Learning (RoBERTa) and Large Language Models (GPT-4 turbo) to deliver empathetic, insightful, and practical mental health advice.
+An AI-powered companion for mental health counselors that combines Machine Learning (RoBERTa) and Large Language Models (GPT-4 mini) to deliver empathetic, insightful, and practical mental health advice.
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
